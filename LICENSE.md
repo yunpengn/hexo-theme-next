@@ -1,9 +1,8 @@
 # <div align="center">«NexT» – Elegant and powerful theme for Hexo.</div>
 
+<p align="center">Copyright © 2018 - Present «<a href="https://github.com/yunpengn/hexo-theme-next">Yunpeng</a>»</p>
+<p align="center">based on</p>
 <p align="center">Copyright © 2017 «<a href="https://github.com/theme-next/hexo-theme-next">NexT</a>».</p>
-
-<p align="center">Detail attribution information for «NexT»<br>
-              is contained in the '<a href="docs/AUTHORS.md">docs/AUTHORS.md</a>' file.</p>
 
   This program is free software; you can redistribute it and/or modify
 it under the terms of the [GNU Affero General Public License version 3][AGPL3]
