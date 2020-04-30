@@ -40,31 +40,31 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  small: /images/favicon/favicon-16x16.png
+  medium: /images/favicon/favicon-32x32.png
+  apple_touch_icon: /images/favicon/apple-touch-icon.png
+  safari_pinned_tab: /images/favicon/safari_pinned_tab.svg
   #android_manifest: /images/manifest.json
-  #ms_browserconfig: /images/browserconfig.xml
+  ms_browserconfig: /images/favicon/browserconfig.xml
 
 # Show multilingual switcher in footer.
 language_switcher: false
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2017
 
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
     name: fa fa-heart
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
-    color: "#ff0000"
+    color: "#593434"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
-  copyright:
+  copyright: <a href="https://yunpengn.github.io/" class="theme-link" rel="author" target="_blank">Niu Yunpeng</a>
 
   # Powered by Hexo & NexT
   powered: true
@@ -86,9 +86,9 @@ footer:
 # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
-  license: by-nc-sa
-  sidebar: false
-  post: false
+  license: by-nc-nd
+  sidebar: true
+  post: true
   language:
 
 
@@ -97,10 +97,10 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -117,10 +117,10 @@ darkmode: false
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  #about: /about/ || fa fa-user
-  #tags: /tags/ || fa fa-tags
-  #categories: /categories/ || fa fa-th
+  categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
+  #tags: /tags/ || fa fa-tags
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -163,11 +163,11 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar_cropped.jpg
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -177,12 +177,14 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
+  GitHub: https://github.com/yunpengn || fab fa-github
+  Facebook: https://www.facebook.com/NeilNiuYunpeng || fab fa-facebook
+  LinkedIn: https://sg.linkedin.com/in/yunpeng-niu/en || fab fa-linkedin
+  Website: https://yunpengn.github.io/ || fab fa-sistrix
   #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
-  #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
   #YouTube: https://youtube.com/yourname || fab fa-youtube
   #Instagram: https://instagram.com/yourname || fab fa-instagram
@@ -296,8 +298,8 @@ related_posts:
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
   enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
-  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
+  url: https://github.com/yunpengn/blog/tree/master/source/_posts # Link for view source.
+  # url: https://github.com/yunpengn/blog/edit/master/source/_posts # Link for fork & edit.
 
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
@@ -342,7 +344,7 @@ text_align:
   mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
@@ -357,7 +359,7 @@ codeblock:
   highlight_theme: normal
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result.
     show_result: false
     # Available values: default | flat | mac
@@ -366,9 +368,9 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -581,8 +583,8 @@ comments:
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: yunpeng
   count: true
   #post_meta_order: 0
 
@@ -670,7 +672,8 @@ add_this_id:
 
 # Google Analytics
 google_analytics:
-  tracking_id: # <app_id>
+  tracking_id: UA-92228484-1
+  localhost_ignored: true
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
